@@ -298,12 +298,12 @@ ngx_http_eval_handler(ngx_http_request_t *r)
         return rc;
     }
 
-    sr->discard_body = 1;
+    //sr->discard_body = 1;
 
     /* we don't want to forward certain request headers to the subrequest */
-    sr->headers_in.content_length_n = 0;
-    sr->headers_in.content_length = NULL;
-    sr->headers_in.content_type = NULL;
+    //sr->headers_in.content_length_n = 0;
+    //sr->headers_in.content_length = NULL;
+    //sr->headers_in.content_type = NULL;
 #if (NGX_HTTP_GZIP)
     sr->headers_in.accept_encoding = NULL;
 #endif
